@@ -1,0 +1,373 @@
+
+/* ===== General Settings ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+/* ===== Header / Navigation ===== */
+
+header {
+    background-color: #ffffff;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+nav input {
+    padding: 0.7rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+nav ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* ===== Hero Section ===== */
+
+.hero {
+    min-height: 75vh;
+    padding: 4rem 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.35),
+                        rgba(0, 0, 0, 0.45)),
+        linear-gradient(135deg, #426b83, #173b50);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    max-width: 40rem;
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    line-height: 1.2;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.9rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+/* ===== Grid Section ===== */
+
+.places {
+    padding: 3rem 5%;
+}
+
+.places h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.place-card {
+    background-color: white;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    padding-bottom: 1rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.place-card h3,
+.place-card p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.place-image {
+    min-height: 12rem;
+    background: linear-gradient(135deg, #8db5c4, #456d80);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ===== Feedback Form ===== */
+
+.feedback {
+    padding: 3rem 5%;
+    background-color: #e8eef5;
+}
+
+.feedback h2 {
+    text-align: center;
+}
+
+.feedback form {
+    max-width: 35rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.feedback input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+}
+
+.feedback input:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+.feedback input:valid {
+    border-color: #16a34a;
+}
+
+.feedback input:invalid:focus {
+    border-color: #dc2626;
+}
+
+.feedback button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+/* ===== Footer ===== */
+
+footer {
+    background-color: #172b3a;
+    color: white;
+    padding: 3rem 5%;
+}
+
+footer section {
+    margin-top: 1.5rem;
+}
+
+footer a {
+    color: #bfdbfe;
+}
+
+#theme-toggle {
+    padding: 0.7rem 1rem;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+body.dark-theme {
+    background-color: #18251e;
+    color: #edf1e9;
+}
+
+body.dark-theme header {
+    background-color: #202f26;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.24);
+}
+
+body.dark-theme .logo {
+    color: #a9c8ac;
+}
+
+body.dark-theme nav input {
+    border-color: #526357;
+    background-color: #293a30;
+    color: #edf1e9;
+}
+
+body.dark-theme .places {
+    background-color: #18251e;
+}
+
+body.dark-theme .place-card {
+    background-color: #26372d;
+    color: #edf1e9;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.22);
+}
+
+body.dark-theme .place-category,
+body.dark-theme .section-intro,
+body.dark-theme .route-intro {
+    color: #bac6bb;
+}
+
+body.dark-theme .place-image {
+    background: #354d3d;
+}
+
+body.dark-theme .route-section,
+body.dark-theme .feedback {
+    background-color: #24352b;
+}
+
+body.dark-theme .route-panel,
+body.dark-theme .feedback h2 {
+    color: #edf1e9;
+}
+
+body.dark-theme #route-form label {
+    color: #d3ddd4;
+}
+
+body.dark-theme #route-form input,
+body.dark-theme .feedback input {
+    border-color: #526357;
+    background-color: #1b2b22;
+    color: #edf1e9;
+}
+
+body.dark-theme .field-note {
+    background-color: #18251e;
+    color: #edf1e9;
+}
+
+body.dark-theme footer {
+    background-color: #101a14;
+}
+
+body.dark-theme footer a {
+    color: #c6d8c8;
+}
+
+body.dark-theme #theme-toggle {
+    border-color: #a9c8ac;
+    color: #edf1e9;
+}
+
+/* ===== Desktop Responsive Design ===== */
+
+@media (min-width: 1024px) {
+
+    nav {
+        flex-wrap: nowrap;
+    }
+
+    nav input {
+        width: 15rem;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding-left: 10%;
+    }
+
+    .places-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+/* ===== Dark Mode ===== */
+
+body.dark-mode {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode header {
+    background-color: #1f2937;
+}
+
+body.dark-mode .place-card {
+    background-color: #1f2937;
+    color: #f9fafb;
+}
+
+body.dark-mode .feedback {
+    background-color: #1f2937;
+    color: #f9fafb;
+}
+
+body.dark-mode .feedback input {
+    background-color: #374151;
+    color: #ffffff;
+    border-color: #4b5563;
+}
+
+body.dark-mode footer {
+    background-color: #030712;
+}
+

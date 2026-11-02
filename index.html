@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f4ed">
+    <meta name="description" content="Discover Almaty's mountain trails, alpine lakes, and best-loved local places with Guideregion.">
+    <title>Guideregion | Explore Almaty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Main navigation">
+            <a href="#home" class="logo" aria-label="Guideregion home">guide<span>region</span><i>.</i></a>
+            <label class="search-box"><span class="search-icon" aria-hidden="true"></span><input id="place-search" type="search" placeholder="Search places" aria-label="Search places"><kbd>/</kbd></label>
+            <button type="button" class="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-links"><span></span><span></span></button>
+            <ul class="nav-links" id="main-links">
+                <li><a href="#places">Places</a></li>
+                <li><a href="#routes">Plan a route</a></li>
+                <li><a href="#tips">Travel notes</a></li>
+                <li><a class="nav-cta" href="#routes">Start exploring <span aria-hidden="true">↗</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="home">
+        <section class="hero" aria-labelledby="hero-title">
+            <img class="hero-image" src="images/hero.jpg" alt="Almaty city beneath the snow-covered mountains">
+            <div class="hero-shade"></div>
+            <div class="hero-content">
+                <p class="eyebrow"><span></span> Your next great story starts here</p>
+                <h1 id="hero-title">Almaty, a little<br>closer to <em>wild.</em></h1>
+                <p class="hero-copy">Mountain air, big-open views, and the places locals never get tired of.</p>
+                <a href="#places" class="hero-link">Find your place <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-caption"><span>43° 13' N</span><span>THE ILE ALATAU</span><span>77° 01' E</span></div>
+            <div class="hero-index"><span>01</span> / 04</div>
+        </section>
+        <section id="places" class="places section-wrap" aria-labelledby="places-title">
+            <div class="section-heading">
+                <div><p class="eyebrow eyebrow-dark">The good places</p><h2 id="places-title">A city with its<br><em>head in the clouds.</em></h2></div>
+                <p class="section-intro">Four local favourites. A hundred ways to spend the day. Pick a starting point and see where the mountains take you.</p>
+            </div>
+            <p class="search-status" id="search-status" aria-live="polite"></p>
+            <div class="places-grid">
+                <article class="place-card place-card-tall" data-search="kok tobe hiking hill cable car city views">
+                    <a class="place-image" href="#routes" aria-label="Plan a trip to Kok Tobe"><img src="images/koktobe.jpg" alt="Kok Tobe hill with its observation tower and cable car" loading="lazy"><span class="place-number">01</span><span class="image-arrow" aria-hidden="true">↗</span></a>
+                    <div class="place-details"><div><p class="place-category">City escape · Easy</p><h3>Kok Tobe</h3></div><p class="rating"><span aria-hidden="true">★</span> 4.8</p></div>
+                </article>
+                <article class="place-card" data-search="big almaty lake 4x4 alpine water mountains">
+                    <a class="place-image" href="#routes" aria-label="Plan a trip to Big Almaty Lake"><img src="images/Bing%20Almaty%20Lake.jpg" alt="Turquoise Big Almaty Lake surrounded by mountain peaks" loading="lazy"><span class="place-number">02</span><span class="image-arrow" aria-hidden="true">↗</span></a>
+                    <div class="place-details"><div><p class="place-category">Alpine lake · 4x4</p><h3>Big Almaty Lake</h3></div><p class="rating"><span aria-hidden="true">★</span> 4.9</p></div>
+                </article>
+                <article class="place-card" data-search="shymbulak hiking skiing cable car resort">
+                    <a class="place-image" href="#routes" aria-label="Plan a trip to Shymbulak"><img src="images/shymbulak.jpg" alt="Snow-covered Shymbulak ski resort in the mountains" loading="lazy"><span class="place-number">03</span><span class="image-arrow" aria-hidden="true">↗</span></a>
+                    <div class="place-details"><div><p class="place-category">High mountain · All day</p><h3>Shymbulak</h3></div><p class="rating"><span aria-hidden="true">★</span> 4.9</p></div>
+                </article>
+                <article class="place-card place-card-tall" data-search="tamgaly petroglyphs ancient rock art history day trip">
+                    <a class="place-image" href="#routes" aria-label="Plan a trip to Tamgaly"><img src="images/Tamgaly.jpg" alt="Ancient petroglyphs carved into the rocks at Tamgaly" loading="lazy"><span class="place-number">04</span><span class="image-arrow" aria-hidden="true">↗</span></a>
+                    <div class="place-details"><div><p class="place-category">Ancient rock art · Day trip</p><h3>Tamgaly</h3></div><p class="rating"><span aria-hidden="true">★</span> 4.9</p></div>
+                </article>
+            </div>
+            <p class="empty-state" id="empty-state" hidden>No places match that search. Try another name or activity.</p>
+            <div class="places-foot"><span>GOOD PLACES, NO PARTICULAR ORDER</span><a href="#routes">Make a day of it <span aria-hidden="true">↗</span></a></div>
+        </section>
+        <section class="route-section" id="routes" aria-labelledby="route-title">
+            <div class="route-photo" role="img" aria-label="A winding road crossing an alpine mountain landscape"></div>
+            <div class="route-panel">
+                <p class="eyebrow eyebrow-dark">Made for your kind of day</p>
+                <h2 id="route-title">Your route.<br><em>Your rhythm.</em></h2>
+                <p class="route-intro">Tell us what your trip looks like. We'll help you shape a route worth getting out of bed for.</p>
+                <form id="route-form">
+                    <div class="form-row"><label for="duration">Days away<input type="number" id="duration" name="duration" min="1" max="30" placeholder="2" required></label><label for="group-size">People<input type="number" id="group-size" name="group-size" min="1" max="50" placeholder="2" required></label></div>
+                    <label for="email">Email address<input type="email" id="email" name="email" placeholder="you@example.com" required></label>
+                    <label for="phone">Phone number <span class="optional">(optional)</span><input type="tel" id="phone" name="phone" placeholder="+7 700 000 00 00"></label>
+                    <button class="submit-button" type="submit">Build my route <span aria-hidden="true">↗</span></button>
+                    <p class="form-status" id="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+        <section class="field-note" aria-label="Local travel note"><span class="note-mark" aria-hidden="true">“</span><blockquote>The mountains are close enough to make a spontaneous Tuesday feel like a holiday.</blockquote><p>A NOTE FROM A LOCAL</p></section>
+    </main>
+    <footer id="tips" class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand"><a href="#home" class="logo logo-light">guide<span>region</span><i>.</i></a><p>Your guide to the wild side of Almaty.</p></div>
+            <div class="footer-column"><h2>Out there</h2><a href="#places">Top places</a><a href="#routes">Plan a route</a><a href="#tips">Travel notes</a></div>
+            <div class="footer-column"><h2>Good to know</h2><p>Emergency services<br><strong>112</strong></p><a href="#tips">Find a certified guide ↗</a></div>
+            <div class="footer-column footer-theme"><h2>Make it yours</h2><button type="button" id="theme-toggle" aria-pressed="false"><span class="theme-icon" aria-hidden="true">◐</span><span>Switch to dark</span></button></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 GUIDEREGION</span><span>MADE FOR THE MOUNTAIN-MINDED</span><div><a href="#tips">Privacy</a><a href="#tips">Terms</a></div></div>
+    </footer>
+</body>
+</html>
